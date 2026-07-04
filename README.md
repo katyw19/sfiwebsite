@@ -24,11 +24,17 @@ Built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, and **
 
 ## Getting started
 
+pnpm is run through corepack (bundled with Node ≥ 16.13), so nothing to install globally:
+
 ```bash
-# pnpm via corepack (bundled with Node ≥ 16.13)
 corepack pnpm install
-corepack pnpm dev        # http://localhost:3000
+corepack pnpm dev
 ```
+
+Then open http://localhost:3000.
+
+> Run each command on its own line. Don't paste a trailing `# ...` note after a
+> command — zsh passes `#` straight through to `next dev` as an argument.
 
 Scripts: `dev`, `build`, `start`, `lint`.
 
