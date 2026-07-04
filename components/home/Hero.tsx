@@ -21,11 +21,14 @@ export function Hero() {
 
       <Container className="relative py-24">
         <div className="max-w-3xl animate-fade-in-up">
-          <span className="eyebrow">A nonprofit for a more thoughtful wardrobe</span>
+          <span className="eyebrow">A Bay Area nonprofit for a more thoughtful wardrobe</span>
           <h1 className="mt-4 font-serif text-4xl leading-[1.05] text-charcoal sm:text-5xl lg:text-hero">
-            Making sustainable fashion the first choice, not an alternative.
+            Sustainable Fashion Initiative
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-iron-grey">
+          <p className="mt-6 max-w-2xl font-serif text-2xl leading-snug text-moss-oak md:text-3xl">
+            Making sustainable fashion the first choice, not an alternative.
+          </p>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-iron-grey">
             SFI creates community-driven experiences — clothing swaps, showcases, and pop-ups — that
             make sustainability the fun, obvious choice.
           </p>

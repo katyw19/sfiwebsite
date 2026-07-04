@@ -24,7 +24,7 @@ const config: Config = {
       fontFamily: {
         serif: ['var(--font-dm-serif)', "Georgia", "serif"],
         sans: ['var(--font-dm-sans)', "system-ui", "sans-serif"],
-        mono: ['var(--font-jetbrains-mono)', "monospace"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       fontSize: {
         hero: ["3.75rem", { lineHeight: "4.25rem", letterSpacing: "-0.01em" }],

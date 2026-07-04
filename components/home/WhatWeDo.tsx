@@ -16,7 +16,7 @@ export function WhatWeDo() {
       />
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
         {whatWeDo.map((item) => (
-          <Card key={item.title} className="flex flex-col" hover>
+          <Card key={item.title} padding="none" className="flex flex-col" hover>
             {/* TODO: Replace placeholder with real event photography */}
             <PlaceholderImage
               seed={item.title}

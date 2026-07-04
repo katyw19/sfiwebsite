@@ -114,7 +114,7 @@ export default function MissionPage() {
 
           {/* Perception barriers callout */}
           <div className="lg:pt-16">
-            <Card fill="oat" threadBorder className="p-8">
+            <Card fill="oat" threadBorder padding="lg">
               <h3 className="font-serif text-xl text-charcoal">
                 Sustainable fashion is often seen as…
               </h3>
@@ -146,7 +146,7 @@ export default function MissionPage() {
         />
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {vision.map((item) => (
-            <div key={item} className="flex items-center gap-3 rounded-lg bg-frost-white p-5">
+            <div key={item} className="flex items-center gap-3 rounded-lg bg-frost-white p-6">
               <Icon name="Sprout" className="h-5 w-5 shrink-0 text-eucalyptus" />
               <span className="text-charcoal">{item}</span>
             </div>
@@ -163,7 +163,7 @@ export default function MissionPage() {
         />
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {pillars.map((pillar, i) => (
-            <div key={pillar.title} className="flex gap-5 pl-5">
+            <div key={pillar.title} className="flex gap-5 pl-6">
               <ThreadLine orientation="vertical" className="shrink-0" />
               <div>
                 <div className="mb-3 flex items-center gap-3">
@@ -214,7 +214,7 @@ export default function MissionPage() {
         />
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {built.map((item) => (
-            <Card key={item.title} threadBorder className="p-7">
+            <Card key={item.title} threadBorder padding="lg">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-oat-milk">
                 <Icon name={item.icon} className="h-6 w-6 text-eucalyptus" />
               </div>
@@ -232,7 +232,7 @@ export default function MissionPage() {
           {next.map((item, i) => (
             <li key={item.title} className="flex gap-5">
               <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-pressed-sage font-mono text-sm font-medium text-charcoal"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-pressed-sage font-serif text-base text-charcoal"
                 aria-hidden="true"
               >
                 {String(i + 1).padStart(2, "0")}

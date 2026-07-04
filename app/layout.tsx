@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import { siteConfig } from "@/lib/site";
 import { Navbar } from "@/components/layout/Navbar";
@@ -16,13 +16,6 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-dm-sans",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
@@ -69,7 +62,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSerif.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${dmSerif.variable} ${dmSans.variable}`}>
       <body className="min-h-screen bg-warm-linen font-sans text-base text-iron-grey antialiased">
         <a
           href="#main-content"

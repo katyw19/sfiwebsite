@@ -47,7 +47,7 @@ export default function TeamPage() {
       <Section bg="frost">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="flex flex-col items-center p-8 text-center sm:flex-row sm:items-start sm:gap-6 sm:text-left">
+            <Card key={member.name} padding="lg" className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:gap-6 sm:text-left">
               {/* TODO: Replace with real headshot */}
               <Avatar name={member.name} />
               <div className="mt-5 sm:mt-0">
@@ -71,7 +71,7 @@ export default function TeamPage() {
         />
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {contributors.map((person) => (
-            <div key={person.name} className="flex items-center gap-4 rounded-lg border border-nordic-linen bg-frost-white p-5">
+            <div key={person.name} className="flex items-center gap-4 rounded-lg border border-nordic-linen bg-frost-white p-6">
               <Avatar name={person.name} size="sm" />
               <div>
                 <h3 className="font-serif text-lg text-charcoal">{person.name}</h3>
@@ -84,7 +84,7 @@ export default function TeamPage() {
 
       {/* CTA */}
       <Section bg="frost">
-        <Card fill="oat" threadBorder className="flex flex-col items-start gap-5 p-8 md:flex-row md:items-center md:justify-between">
+        <Card fill="oat" threadBorder padding="lg" className="flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-serif text-2xl text-charcoal">Want to join the team?</h2>
             <p className="mt-2 text-iron-grey">

@@ -94,7 +94,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
 
           {/* Sidebar: RSVP */}
           <aside className="lg:pt-1">
-            <div className="sticky top-24 rounded-lg border border-nordic-linen bg-frost-white p-6">
+            <div className="sticky top-24 rounded-lg border border-nordic-linen bg-frost-white p-7">
               {canRsvp ? (
                 <>
                   <h2 className="font-serif text-2xl text-charcoal">RSVP</h2>

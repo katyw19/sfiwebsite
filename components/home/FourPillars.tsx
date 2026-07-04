@@ -14,7 +14,7 @@ export function FourPillars() {
       />
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
         {pillars.map((pillar) => (
-          <Card key={pillar.title} fill="oat" threadBorder className="p-7">
+          <Card key={pillar.title} fill="oat" threadBorder padding="lg">
             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-frost-white">
               <Icon name={pillar.icon} className="h-6 w-6 text-eucalyptus" />
             </div>

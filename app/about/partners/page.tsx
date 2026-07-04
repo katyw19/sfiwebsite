@@ -28,7 +28,7 @@ export default function PartnersPage() {
         <SectionHeading eyebrow="Brand Partners" title="Brands on our side" />
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {brandPartners.map((partner) => (
-            <Card key={partner.name} className="flex flex-col gap-4 p-8">
+            <Card key={partner.name} padding="lg" className="flex flex-col gap-4">
               {/* TODO: Replace with real partner logo */}
               <div className="flex h-16 w-40 items-center justify-center rounded-lg bg-oat-milk font-serif text-xl text-charcoal">
                 {partner.name}
@@ -38,7 +38,7 @@ export default function PartnersPage() {
           ))}
 
           {/* Placeholder slot for future partners */}
-          <Card className="flex flex-col items-center justify-center gap-3 border-dashed p-8 text-center">
+          <Card padding="lg" className="flex flex-col items-center justify-center gap-3 border-dashed text-center">
             <Icon name="Sparkles" className="h-7 w-7 text-eucalyptus" />
             <p className="font-serif text-lg text-charcoal">Your brand here</p>
             <p className="text-sm text-iron-grey">
@@ -65,7 +65,7 @@ export default function PartnersPage() {
           {schoolPartners.map((school) => (
             <div
               key={school}
-              className="flex items-center gap-3 rounded-lg border border-nordic-linen bg-frost-white p-5"
+              className="flex items-center gap-3 rounded-lg border border-nordic-linen bg-frost-white p-6"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-oat-milk">
                 <Icon name="MapPin" className="h-5 w-5 text-eucalyptus" />
@@ -82,7 +82,7 @@ export default function PartnersPage() {
 
       {/* Become a partner */}
       <Section bg="frost">
-        <Card fill="oat" threadBorder className="flex flex-col items-start gap-5 p-8 md:flex-row md:items-center md:justify-between">
+        <Card fill="oat" threadBorder padding="lg" className="flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-serif text-2xl text-charcoal">Become a partner</h2>
             <p className="mt-2 max-w-xl text-iron-grey">

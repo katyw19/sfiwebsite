@@ -19,17 +19,15 @@ export function EventCard({ event, upcoming }: { event: EventItem; upcoming: boo
   const canRsvp = upcoming && event.rsvpOpen;
 
   return (
-    <Card as="article" hover className="flex flex-col p-6">
+    <Card as="article" hover className="flex flex-col">
       <div className="flex items-start justify-between gap-4">
         {/* Date badge */}
-        <div className="flex flex-col items-center rounded-lg bg-pressed-sage/40 px-4 py-2 text-center">
-          <span className="font-mono text-xs font-medium uppercase tracking-wide text-pine-smoke">
+        <div className="flex flex-col items-center rounded-lg bg-pressed-sage/40 px-4 py-2.5 text-center">
+          <span className="text-xs font-semibold uppercase tracking-eyebrow text-pine-smoke">
             {badge.month}
           </span>
-          <span className="font-mono text-2xl font-medium leading-none text-charcoal">
-            {badge.day}
-          </span>
-          <span className="font-mono text-[0.65rem] text-iron-grey">{badge.year}</span>
+          <span className="font-serif text-2xl leading-none text-charcoal">{badge.day}</span>
+          <span className="text-[0.7rem] text-iron-grey">{badge.year}</span>
         </div>
         <div className="flex flex-wrap justify-end gap-2">
           <Badge>{typeLabels[event.eventType]}</Badge>

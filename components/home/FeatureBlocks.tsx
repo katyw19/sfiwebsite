@@ -12,7 +12,7 @@ export function FeatureBlocks() {
       <SectionHeading eyebrow="Dig Deeper" title="Learn, reuse, and share" />
       <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-3">
         {homeFeatureBlocks.map((block) => (
-          <div key={block.title} className="flex flex-col pl-5">
+          <div key={block.title} className="flex flex-col pl-6">
             <ThreadLine orientation="vertical" className="mb-5 h-8" />
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-oat-milk">
               <Icon name={block.icon} className="h-6 w-6 text-eucalyptus" />

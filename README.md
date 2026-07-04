@@ -18,7 +18,7 @@ Built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, and **
 | Content      | MDX via `next-mdx-remote/rsc` + `gray-matter`      |
 | Forms        | React Hook Form + Next.js Server Actions           |
 | Icons        | `lucide-react` (1.5px stroke)                      |
-| Fonts        | `next/font` — DM Serif Display, DM Sans, JetBrains Mono |
+| Fonts        | `next/font` — DM Serif Display, DM Sans           |
 | Deployment   | Vercel                                             |
 | Package mgr  | pnpm                                               |
 
@@ -117,7 +117,7 @@ Newsletter, RSVP, Volunteer, Host-a-Swap, and Program-Lead forms are all wired t
 
 - **Palette:** warm neutrals (linen/oat) + muted sage/eucalyptus greens. Tokens live in
   `tailwind.config.ts` and `styles/globals.css`. No pure white/black.
-- **Type:** DM Serif Display (h1–h3), DM Sans (body/UI), JetBrains Mono (stats).
+- **Type:** DM Serif Display (headings + impact numbers), DM Sans (body/UI).
 - **Thread line:** the signature 1–2px pressed-sage motif — see `components/ui/ThreadLine.tsx`.
 - Section backgrounds alternate linen ↔ frost-white for rhythm.
 

@@ -11,7 +11,7 @@ export type PostMeta = Omit<BlogPost, "content">;
 
 export function BlogCard({ post }: { post: PostMeta }) {
   return (
-    <Card as="article" className="flex flex-col" hover>
+    <Card as="article" padding="none" className="flex flex-col" hover>
       <Link href={`/blog/${post.slug}`} className="group flex flex-1 flex-col" aria-label={post.title}>
         {/* TODO: Replace placeholder with the post's featured image ({post.image}) */}
         <PlaceholderImage

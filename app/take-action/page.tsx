@@ -92,7 +92,7 @@ export default function TakeActionPage() {
         title="Become a Program Lead at your school"
         bg="frost"
         aside={
-          <Card className="p-6 md:p-8">
+          <Card padding="lg">
             <ProgramLeadForm />
           </Card>
         }
@@ -112,7 +112,7 @@ export default function TakeActionPage() {
         title="Bring a swap to your school or community"
         bg="linen"
         aside={
-          <Card className="p-6 md:p-8">
+          <Card padding="lg">
             <SwapRequestForm />
           </Card>
         }
@@ -131,7 +131,7 @@ export default function TakeActionPage() {
         title="Volunteer with SFI"
         bg="frost"
         aside={
-          <Card className="p-6 md:p-8">
+          <Card padding="lg">
             <VolunteerForm />
           </Card>
         }
@@ -150,7 +150,7 @@ export default function TakeActionPage() {
         title="Support the mission"
         bg="linen"
         aside={
-          <Card fill="oat" threadBorder className="flex h-full flex-col justify-center gap-5 p-8">
+          <Card fill="oat" threadBorder padding="lg" className="flex h-full flex-col justify-center gap-5">
             <p className="leading-relaxed text-iron-grey">
               Your tax-deductible contribution helps us host more swaps, produce more educational
               content, and grow the movement.
@@ -183,7 +183,7 @@ export default function TakeActionPage() {
         title="Follow along"
         bg="frost"
         aside={
-          <Card className="flex flex-col gap-6 p-8">
+          <Card padding="lg" className="flex flex-col gap-6">
             <div className="flex flex-col gap-3">
               <a
                 href={siteConfig.socials.instagram.href}

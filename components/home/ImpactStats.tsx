@@ -10,7 +10,7 @@ export function ImpactStats() {
           {impactStats.map((stat) => (
             <div key={stat.value} className="flex flex-col gap-3">
               <ThreadLine className="w-10" />
-              <dt className="font-mono text-3xl font-medium leading-none text-charcoal md:text-4xl">
+              <dt className="font-serif text-4xl leading-tight text-charcoal md:text-5xl">
                 {stat.value}
               </dt>
               <dd className="text-sm leading-snug text-iron-grey">{stat.label}</dd>
