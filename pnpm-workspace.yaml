@@ -1,0 +1,4 @@
+# pnpm 11 reads build-script approvals here (no longer from package.json).
+# unrs-resolver ships prebuilt binaries; approving it just selects the right one.
+allowBuilds:
+  unrs-resolver: true

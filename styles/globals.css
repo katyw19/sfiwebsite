@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   SFI design tokens — mirrors tailwind.config.ts for use in raw CSS contexts.
+   Palette blends warm neutrals with muted sage/eucalyptus greens.
+--------------------------------------------------------------------------- */
+:root {
+  /* Backgrounds & neutrals */
+  --warm-linen: #f1eee8;
+  --oat-milk: #e4decf;
+  --frost-white: #f6f7f4;
+  --ash-wood: #e7ada2;
+
+  /* Greens (core brand) */
+  --pressed-sage: #b9c1ae;
+  --eucalyptus: #8f9e8a;
+  --pine-smoke: #7a857c;
+  --moss-oak: #5f6f60;
+
+  /* Text & darks */
+  --iron-grey: #5e6462;
+  --charcoal: #3a3f3b;
+  --nordic-linen: #e4ded4;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--warm-linen);
+    color: var(--iron-grey);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--charcoal);
+    letter-spacing: -0.01em;
+  }
+
+  /* Accessible, on-brand focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--pressed-sage);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect reduced-motion preference globally */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Container — max 1200px, responsive padding per the spec */
+  .container-sfi {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .container-sfi {
+      padding-inline: 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-sfi {
+      padding-inline: 64px;
+    }
+  }
+
+  /* Eyebrow / label styling — uppercase, tracked, small */
+  .eyebrow {
+    font-size: 0.8125rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--eucalyptus);
+  }
+}
