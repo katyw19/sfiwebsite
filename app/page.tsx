@@ -4,7 +4,6 @@ import { FourPillars } from "@/components/home/FourPillars";
 import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { FeatureBlocks } from "@/components/home/FeatureBlocks";
 import { FeaturedBlog } from "@/components/home/FeaturedBlog";
-import { CTABanner } from "@/components/home/CTABanner";
 
 export default function HomePage() {
   return (
@@ -15,7 +14,6 @@ export default function HomePage() {
       <WhatWeDo />
       <FeatureBlocks />
       <FeaturedBlog />
-      <CTABanner />
     </>
   );
 }

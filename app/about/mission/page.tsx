@@ -6,7 +6,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { ThreadLine } from "@/components/ui/ThreadLine";
 import { Icon } from "@/components/ui/icons";
-import { CTABanner } from "@/components/home/CTABanner";
 import { pillars } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -255,8 +254,6 @@ export default function MissionPage() {
           .
         </p>
       </Section>
-
-      <CTABanner headline="Help make sustainable fashion the first choice." />
     </>
   );
 }

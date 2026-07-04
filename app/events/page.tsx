@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { EventList } from "@/components/events/EventList";
-import { CTABanner } from "@/components/home/CTABanner";
 import { getUpcomingEvents, getPastEvents } from "@/lib/events";
 
 export const metadata: Metadata = {
@@ -26,11 +25,6 @@ export default function EventsPage() {
       <Section bg="frost">
         <EventList upcoming={upcoming} past={past} />
       </Section>
-
-      <CTABanner
-        headline="Want to host a swap at your school or community?"
-        cta={{ label: "Request a Swap", href: "/take-action#host-a-swap" }}
-      />
     </>
   );
 }
