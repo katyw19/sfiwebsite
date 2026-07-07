@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { resolvePublicImage } from "./images";
 
 const EVENTS_DIR = path.join(process.cwd(), "content", "events");
 
@@ -42,7 +43,7 @@ function readAllEvents(): EventItem[] {
         school: data.school,
         description: content.trim(),
         excerpt: data.excerpt ?? "",
-        image: data.image,
+        image: resolvePublicImage(data.image),
         rsvpOpen: Boolean(data.rsvpOpen),
         eventType: (data.eventType as EventType) ?? "other",
       } satisfies EventItem;

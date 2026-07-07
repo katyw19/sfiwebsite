@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { readingTime as computeReadingTime } from "./utils";
+import { resolvePublicImage } from "./images";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
@@ -35,7 +36,7 @@ function readAllPosts(): BlogPost[] {
         date: data.date ?? "1970-01-01",
         author: data.author ?? "SFI",
         excerpt: data.excerpt ?? "",
-        image: data.image,
+        image: resolvePublicImage(data.image),
         tags: Array.isArray(data.tags) ? data.tags : [],
         readingTime: data.readingTime ?? computeReadingTime(content),
         content,

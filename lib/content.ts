@@ -58,6 +58,7 @@ export interface FeatureBlock {
   icon: string;
   ctaLabel: string;
   ctaHref: string;
+  image?: string;
 }
 
 /** "What We Do" home section — experiences people actually want. */
@@ -69,6 +70,7 @@ export const whatWeDo: FeatureBlock[] = [
       "Bring gently-used items, leave with something new to you. Our swaps give clothes a second life and build community around sustainability.",
     ctaLabel: "See upcoming events",
     ctaHref: "/events",
+    image: "/images/home/swaps.jpg",
   },
   {
     title: "Fashion Showcases",
@@ -77,6 +79,7 @@ export const whatWeDo: FeatureBlock[] = [
       "Fashion shows featuring thrifted, borrowed, swapped, and upcycled outfits — proof that sustainability and style can coexist.",
     ctaLabel: "See upcoming events",
     ctaHref: "/events",
+    image: "/images/home/showcases.jpg",
   },
   {
     title: "Pop-up Experiences",
@@ -85,6 +88,7 @@ export const whatWeDo: FeatureBlock[] = [
       "Community clothing swap stands and brand-spotlight collaborations that meet people where they already are.",
     ctaLabel: "See upcoming events",
     ctaHref: "/events",
+    image: "/images/home/popups.jpg",
   },
 ];
 

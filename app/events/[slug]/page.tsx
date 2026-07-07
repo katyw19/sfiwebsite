@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ThreadLine } from "@/components/ui/ThreadLine";
@@ -40,13 +41,18 @@ export default function EventPage({ params }: { params: { slug: string } }) {
   return (
     <article>
       {/* Hero image */}
-      {/* TODO: Replace placeholder with real event photo ({event.image}) */}
-      <PlaceholderImage
-        seed={event.slug}
-        icon={event.eventType === "showcase" ? "Shirt" : "Recycle"}
-        className="h-64 w-full rounded-none md:h-80"
-        rounded={false}
-      />
+      {event.image ? (
+        <div className="relative h-64 w-full overflow-hidden md:h-80">
+          <Image src={event.image} alt={event.title} fill priority sizes="100vw" className="object-cover" />
+        </div>
+      ) : (
+        <PlaceholderImage
+          seed={event.slug}
+          icon={event.eventType === "showcase" ? "Shirt" : "Recycle"}
+          className="h-64 w-full rounded-none md:h-80"
+          rounded={false}
+        />
+      )}
 
       <Container className="py-12 md:py-16">
         <div className="mx-auto max-w-3xl">

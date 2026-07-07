@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
@@ -13,13 +14,24 @@ export function BlogCard({ post }: { post: PostMeta }) {
   return (
     <Card as="article" padding="none" className="flex flex-col" hover>
       <Link href={`/blog/${post.slug}`} className="group flex flex-1 flex-col" aria-label={post.title}>
-        {/* TODO: Replace placeholder with the post's featured image ({post.image}) */}
-        <PlaceholderImage
-          seed={post.slug}
-          icon={post.tags[0] === "guides" ? "BookOpen" : "Leaf"}
-          className="h-48 w-full rounded-none"
-          rounded={false}
-        />
+        {post.image ? (
+          <div className="relative h-48 w-full overflow-hidden">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              sizes="(min-width: 768px) 33vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
+        ) : (
+          <PlaceholderImage
+            seed={post.slug}
+            icon={post.tags[0] === "guides" ? "BookOpen" : "Leaf"}
+            className="h-48 w-full rounded-none"
+            rounded={false}
+          />
+        )}
         <div className="flex flex-1 flex-col p-6">
           <div className="flex items-center gap-2 text-xs text-iron-grey">
             <time dateTime={post.date}>{formatDate(post.date)}</time>

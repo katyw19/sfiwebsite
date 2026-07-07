@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { ThreadLine } from "@/components/ui/ThreadLine";
@@ -43,13 +44,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <article>
       {/* Hero image */}
-      {/* TODO: Replace placeholder with the post's featured image ({post.image}) */}
-      <PlaceholderImage
-        seed={post.slug}
-        icon={post.tags.includes("guides") ? "BookOpen" : "Leaf"}
-        className="h-[280px] w-full rounded-none md:h-[400px]"
-        rounded={false}
-      />
+      {post.image ? (
+        <div className="relative h-[280px] w-full overflow-hidden md:h-[400px]">
+          <Image src={post.image} alt={post.title} fill priority sizes="100vw" className="object-cover" />
+        </div>
+      ) : (
+        <PlaceholderImage
+          seed={post.slug}
+          icon={post.tags.includes("guides") ? "BookOpen" : "Leaf"}
+          className="h-[280px] w-full rounded-none md:h-[400px]"
+          rounded={false}
+        />
+      )}
 
       <Container className="py-12 md:py-16">
         <div className="mx-auto max-w-3xl">

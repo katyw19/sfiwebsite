@@ -2,7 +2,9 @@ import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import Image from "next/image";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { publicImageExists } from "@/lib/images";
 import { Icon } from "@/components/ui/icons";
 import { whatWeDo } from "@/lib/content";
 
@@ -17,13 +19,24 @@ export function WhatWeDo() {
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
         {whatWeDo.map((item) => (
           <Card key={item.title} padding="none" className="flex flex-col" hover>
-            {/* TODO: Replace placeholder with real event photography */}
-            <PlaceholderImage
-              seed={item.title}
-              icon={item.icon}
-              className="h-44 w-full rounded-none"
-              rounded={false}
-            />
+            {item.image && publicImageExists(item.image) ? (
+              <div className="relative h-44 w-full overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <PlaceholderImage
+                seed={item.title}
+                icon={item.icon}
+                className="h-44 w-full rounded-none"
+                rounded={false}
+              />
+            )}
             <div className="flex flex-1 flex-col p-6">
               <h3 className="font-serif text-xl text-charcoal">{item.title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-iron-grey">{item.description}</p>
