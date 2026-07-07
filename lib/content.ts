@@ -161,7 +161,7 @@ export const contributors: Contributor[] = [
   {
     name: "Kyle Wan",
     title: "Contributing Writer",
-    // TODO: Add headshot at /images/team/kyle-wan.jpg
+    image: "/images/team/kyle-wan.jpg",
   },
   {
     name: "Katy Wan",
@@ -173,19 +173,19 @@ export const contributors: Contributor[] = [
     name: "Skyler Law",
     title: "School Lead",
     school: "Castilleja",
-    // TODO: Add headshot at /images/team/skyler-law.jpg
+    image: "/images/team/skyler-law.jpg",
   },
   {
     name: "Elly An",
     title: "School Lead",
     school: "Castilleja",
-    // TODO: Add headshot at /images/team/elly-an.jpg
+    image: "/images/team/elly-an.jpg",
   },
   {
     name: "Emma Kloster",
     title: "School Lead",
     school: "Crystal Springs Uplands School",
-    // TODO: Add headshot at /images/team/emma-kloster.jpg
+    image: "/images/team/emma-kloster.jpg",
   },
 ];
 
