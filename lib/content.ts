@@ -127,28 +127,25 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Katy Wan",
     title: "President & Founder",
-    bio: "Katy founded SFI after learning the true cost of the clothes she loved. She discovered that the fashion industry is responsible for 10% of annual global carbon emissions and that many garments take hundreds of years to decompose. She started SFI to help build a more thoughtful relationship with what we wear. Outside of SFI, she enjoys digital art, crafting, and writing.",
+    bio: "Founded the Sustainable Fashion Initiative to reduce textile waste and make sustainable fashion more accessible through community engagement and education. Leads the organization's vision, partnerships, and strategic growth while empowering communities to rethink fashion consumption.",
     image: "/images/team/katy-wan.jpg",
   },
   {
     name: "Kavita Sarin",
     title: "Vice President",
-    // TODO: Replace with real bio.
-    bio: "Bio coming soon. Kavita helps guide SFI's strategy and growth as Vice President.",
+    bio: "Professor of Dermatology at Stanford Medicine. Brings expertise in healthcare, research, and organizational leadership to guide the Initiative's strategic growth and long-term impact. Passionate about advancing healthier communities through education and sustainable choices.",
     image: "/images/team/kavita-sarin.jpg",
   },
   {
     name: "Dan Wan",
-    title: "Secretary / Legal",
-    // TODO: Replace with real bio.
-    bio: "Bio coming soon. Dan supports SFI's governance and legal foundation as Secretary.",
+    title: "Secretary",
+    bio: "Patent attorney with experience in corporate law. Provides legal oversight and governance guidance to help the Initiative operate with integrity, transparency, and strong organizational practices while supporting its long-term mission.",
     image: "/images/team/dan-wan.jpg",
   },
   {
     name: "Cassandra McClure",
     title: "Board Advisor",
-    // TODO: Replace with real bio.
-    bio: "Bio coming soon. Cassandra advises the SFI board on nonprofit strategy and impact.",
+    bio: "Founder and Editor-in-Chief of Clean Living Magazine. Brings expertise in sustainability, brand partnerships, media, and community engagement, helping the Initiative expand its reach and inspire more conscious consumer choices through strategic storytelling and collaboration.",
     image: "/images/team/cassandra-mcclure.jpg",
   },
 ];
