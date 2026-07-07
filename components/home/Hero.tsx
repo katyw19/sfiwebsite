@@ -10,13 +10,13 @@ export function Hero() {
       <Container className="grid grid-cols-1 items-center gap-10 py-14 md:gap-12 lg:min-h-[86vh] lg:grid-cols-2 lg:gap-16 lg:py-20">
         {/* Photo — left on desktop, below text on mobile */}
         <div className="order-2 lg:order-1">
-          <div className="relative aspect-square w-full overflow-hidden rounded-xl border border-nordic-linen shadow-[0_20px_50px_rgba(58,63,59,0.12)]">
+          <div className="relative mx-auto aspect-[3/2] w-full max-w-lg overflow-hidden rounded-xl border border-nordic-linen shadow-[0_20px_50px_rgba(58,63,59,0.12)] lg:max-w-none">
             <Image
               src="/images/home/hero.jpg"
               alt="A rack of neutral-toned secondhand clothing beside a leafy rubber plant"
               fill
               priority
-              sizes="(min-width: 1024px) 45vw, 100vw"
+              sizes="(min-width: 1024px) 48vw, 100vw"
               className="object-cover"
             />
           </div>
