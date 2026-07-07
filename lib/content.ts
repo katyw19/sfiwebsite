@@ -157,7 +157,10 @@ export interface Contributor {
 
 export const contributors: Contributor[] = [
   { name: "Kyle Wan", title: "Contributing Writer" },
-  { name: "Katelyn Wan", title: "Contributing Writer" },
+  { name: "Katy Wan", title: "School Lead, The Nueva School" },
+  { name: "Skyler Law", title: "School Lead, Castilleja" },
+  { name: "Elly An", title: "School Lead, Castilleja" },
+  { name: "Emma Kloster", title: "School Lead, Crystal Springs Uplands School" },
 ];
 
 /** Blog author bios, keyed by the frontmatter `author` name. */
