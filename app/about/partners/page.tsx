@@ -45,7 +45,7 @@ export default function PartnersPage() {
               We&apos;re growing our roster of mission-aligned partners.
             </p>
             <Link
-              href="/take-action"
+              href="/take-action#partner"
               className="text-sm font-medium text-pine-smoke underline underline-offset-4 hover:text-moss-oak"
             >
               Partner with SFI
@@ -90,7 +90,7 @@ export default function PartnersPage() {
             </p>
           </div>
           <Link
-            href="/take-action"
+            href="/take-action#partner"
             className={buttonClasses({ variant: "primary", size: "lg", className: "shrink-0" })}
           >
             Get in touch

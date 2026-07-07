@@ -15,10 +15,10 @@ const exploreLinks = [
 ];
 
 const involvedLinks = [
-  { label: "Volunteer", href: "/take-action#volunteer" },
-  { label: "Host a Swap", href: "/take-action#host-a-swap" },
-  { label: "Donate", href: "/take-action#donate" },
-  { label: "Partner with SFI", href: "/about/partners" },
+  { label: "Become a Program Lead", href: "/take-action#program-lead" },
+  { label: "Partner with SFI", href: "/take-action#partner" },
+  { label: "Our Partners", href: "/about/partners" },
+  { label: "Stay Connected", href: "/take-action#stay-connected" },
 ];
 
 export function Footer() {

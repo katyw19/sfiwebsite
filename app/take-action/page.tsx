@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
-import { buttonClasses } from "@/components/ui/Button";
 import { Icon, TikTokIcon } from "@/components/ui/icons";
 import { ProgramLeadForm } from "@/components/forms/ProgramLeadForm";
-import { SwapRequestForm } from "@/components/forms/SwapRequestForm";
-import { VolunteerForm } from "@/components/forms/VolunteerForm";
+import { BrandPartnerForm } from "@/components/forms/BrandPartnerForm";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -14,14 +12,12 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Take Action",
   description:
-    "Every action counts. Volunteer, host a swap, become a Program Lead, donate, or stay connected with SFI.",
+    "Get involved with SFI — become a Program Lead, partner your brand with us, or stay connected.",
 };
 
 const jumpLinks = [
   { label: "Program Lead", href: "#program-lead" },
-  { label: "Host a Swap", href: "#host-a-swap" },
-  { label: "Volunteer", href: "#volunteer" },
-  { label: "Donate", href: "#donate" },
+  { label: "For Brands", href: "#partner" },
   { label: "Stay Connected", href: "#stay-connected" },
 ];
 
@@ -104,74 +100,23 @@ export default function TakeActionPage() {
         </p>
       </ActionBlock>
 
-      {/* Host a Swap */}
+      {/* Partner with SFI (brands) */}
       <ActionBlock
-        id="host-a-swap"
-        icon="Recycle"
-        eyebrow="Host a Swap"
-        title="Bring a swap to your school or community"
+        id="partner"
+        icon="Store"
+        eyebrow="For Brands"
+        title="Partner with SFI"
         bg="linen"
         aside={
           <Card padding="lg">
-            <SwapRequestForm />
+            <BrandPartnerForm />
           </Card>
         }
       >
         <p>
-          We&apos;ll help you plan, promote, and run a clothing swap — start to finish. Great for
-          schools, workplaces, dorms, and community groups.
-        </p>
-      </ActionBlock>
-
-      {/* Volunteer */}
-      <ActionBlock
-        id="volunteer"
-        icon="Users"
-        eyebrow="Volunteer"
-        title="Volunteer with SFI"
-        bg="frost"
-        aside={
-          <Card padding="lg">
-            <VolunteerForm />
-          </Card>
-        }
-      >
-        <p>
-          Help organize events, create content, run outreach, or support behind the scenes. Tell us
-          what you love doing.
-        </p>
-      </ActionBlock>
-
-      {/* Donate */}
-      <ActionBlock
-        id="donate"
-        icon="Heart"
-        eyebrow="Donate"
-        title="Support the mission"
-        bg="linen"
-        aside={
-          <Card fill="oat" threadBorder padding="lg" className="flex h-full flex-col justify-center gap-5">
-            <p className="leading-relaxed text-iron-grey">
-              Your tax-deductible contribution helps us host more swaps, produce more educational
-              content, and grow the movement.
-            </p>
-            {/* TODO: Replace with the real donation URL (Stripe / GoFundMe). */}
-            <a
-              href="https://www.gofundme.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonClasses({ variant: "primary", size: "lg", className: "self-start" })}
-            >
-              Make a Donation
-              <Icon name="ArrowRight" className="h-4 w-4" />
-            </a>
-            <p className="text-xs text-iron-grey">501(c)(3) status pending.</p>
-          </Card>
-        }
-      >
-        <p>
-          Support SFI&apos;s mission with a tax-deductible contribution. Every dollar goes toward
-          swaps, content, and community.
+          Are you a brand that shares our mission? Collaborate on an event, donate product for a swap
+          or giveaway, sponsor a program, or get featured across our channels. Tell us what you have
+          in mind and we&apos;ll find the right fit.
         </p>
       </ActionBlock>
 

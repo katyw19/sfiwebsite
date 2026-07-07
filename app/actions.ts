@@ -59,6 +59,26 @@ export async function submitVolunteer(input: {
   return { ok: true, message: "Thanks for signing up! We'll be in touch within 3–5 days." };
 }
 
+export async function submitBrandPartner(input: {
+  brand: string;
+  name: string;
+  email: string;
+  website?: string;
+  interests: string[];
+  message?: string;
+}): Promise<ActionResult> {
+  const missing = requireFields(input, ["brand", "name", "email"]);
+  if (missing) return { ok: false, message: missing };
+  if (!EMAIL_RE.test(input.email)) {
+    return { ok: false, message: "Please enter a valid email address." };
+  }
+  await deliver("brand-partner", input);
+  return {
+    ok: true,
+    message: "Thanks for reaching out! We'll be in touch within 3–5 days to explore a partnership.",
+  };
+}
+
 export async function submitSwapRequest(input: {
   name: string;
   email: string;
