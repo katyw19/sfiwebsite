@@ -49,7 +49,7 @@ export function EventCard({ event, upcoming }: { event: EventItem; upcoming: boo
           href={`/events/${event.slug}`}
           className={buttonClasses({ variant: canRsvp ? "primary" : "outline", size: "sm" })}
         >
-          {canRsvp ? "RSVP" : "Learn More"}
+          Learn More
         </Link>
       </div>
     </Card>
