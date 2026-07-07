@@ -23,13 +23,13 @@ const involvedLinks = [
 
 export function Footer() {
   return (
-    <footer className="mt-24 bg-moss-oak text-frost-white">
+    <footer className="mt-16 bg-moss-oak text-frost-white">
       {/* Newsletter band */}
       <div className="border-b border-frost-white/15">
-        <Container className="flex flex-col items-start gap-6 py-12 md:flex-row md:items-center md:justify-between">
+        <Container className="flex flex-col items-start gap-4 py-8 md:flex-row md:items-center md:justify-between">
           <div className="max-w-md">
-            <h2 className="font-serif text-2xl text-frost-white">Never miss an update</h2>
-            <p className="mt-2 text-sm text-frost-white/80">
+            <h2 className="font-serif text-xl text-frost-white">Never miss an update</h2>
+            <p className="mt-1.5 text-sm text-frost-white/80">
               Get updates on upcoming events, new blog posts, and ways to get involved.
             </p>
           </div>
@@ -38,7 +38,7 @@ export function Footer() {
       </div>
 
       {/* Columns */}
-      <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="grid grid-cols-1 gap-8 py-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">
             <span className="font-serif text-xl text-frost-white">SFI</span>
@@ -51,7 +51,7 @@ export function Footer() {
 
         <nav aria-label="Explore">
           <h3 className="text-sm font-bold uppercase tracking-eyebrow text-frost-white/70">Explore</h3>
-          <ul className="mt-4 flex flex-col gap-2.5">
+          <ul className="mt-3 flex flex-col gap-2">
             {exploreLinks.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="text-sm text-frost-white/85 transition-colors hover:text-frost-white hover:underline">
@@ -64,7 +64,7 @@ export function Footer() {
 
         <nav aria-label="Get involved">
           <h3 className="text-sm font-bold uppercase tracking-eyebrow text-frost-white/70">Get Involved</h3>
-          <ul className="mt-4 flex flex-col gap-2.5">
+          <ul className="mt-3 flex flex-col gap-2">
             {involvedLinks.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="text-sm text-frost-white/85 transition-colors hover:text-frost-white hover:underline">
@@ -77,7 +77,7 @@ export function Footer() {
 
         <div>
           <h3 className="text-sm font-bold uppercase tracking-eyebrow text-frost-white/70">Connect</h3>
-          <ul className="mt-4 flex flex-col gap-2.5">
+          <ul className="mt-3 flex flex-col gap-2">
             <li>
               <a
                 href={siteConfig.socials.instagram.href}
@@ -122,7 +122,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-frost-white/15">
-        <Container className="flex flex-col items-center justify-between gap-2 py-6 text-xs text-frost-white/70 sm:flex-row">
+        <Container className="flex flex-col items-center justify-between gap-2 py-4 text-xs text-frost-white/70 sm:flex-row">
           <p>© 2026 Sustainable Fashion Initiative. All rights reserved.</p>
           <p>501(c)(3) status pending</p>
         </Container>
