@@ -153,14 +153,40 @@ export const teamMembers: TeamMember[] = [
 export interface Contributor {
   name: string;
   title: string;
+  school?: string;
+  image?: string;
 }
 
 export const contributors: Contributor[] = [
-  { name: "Kyle Wan", title: "Contributing Writer" },
-  { name: "Katy Wan", title: "School Lead, The Nueva School" },
-  { name: "Skyler Law", title: "School Lead, Castilleja" },
-  { name: "Elly An", title: "School Lead, Castilleja" },
-  { name: "Emma Kloster", title: "School Lead, Crystal Springs Uplands School" },
+  {
+    name: "Kyle Wan",
+    title: "Contributing Writer",
+    // TODO: Add headshot at /images/team/kyle-wan.jpg
+  },
+  {
+    name: "Katy Wan",
+    title: "School Lead",
+    school: "The Nueva School",
+    image: "/images/team/katy-wan.jpg",
+  },
+  {
+    name: "Skyler Law",
+    title: "School Lead",
+    school: "Castilleja",
+    // TODO: Add headshot at /images/team/skyler-law.jpg
+  },
+  {
+    name: "Elly An",
+    title: "School Lead",
+    school: "Castilleja",
+    // TODO: Add headshot at /images/team/elly-an.jpg
+  },
+  {
+    name: "Emma Kloster",
+    title: "School Lead",
+    school: "Crystal Springs Uplands School",
+    // TODO: Add headshot at /images/team/emma-kloster.jpg
+  },
 ];
 
 /** Blog author bios, keyed by the frontmatter `author` name. */

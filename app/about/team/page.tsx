@@ -38,10 +38,13 @@ export default function TeamPage() {
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {contributors.map((person) => (
             <div key={person.name} className="flex items-center gap-4 rounded-lg border border-nordic-linen bg-frost-white p-6">
-              <Avatar name={person.name} sizePx={64} />
+              <Avatar name={person.name} src={person.image} sizePx={64} />
               <div>
                 <h3 className="font-serif text-lg text-charcoal">{person.name}</h3>
                 <p className="text-sm text-iron-grey">{person.title}</p>
+                {person.school && (
+                  <p className="mt-0.5 text-xs font-medium text-eucalyptus">{person.school}</p>
+                )}
               </div>
             </div>
           ))}
