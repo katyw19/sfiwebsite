@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -21,13 +22,28 @@ function initials(name: string): string {
     .join("");
 }
 
-/** Circular headshot placeholder. TODO: swap for real photos at /images/team. */
-function Avatar({ name, size = "lg" }: { name: string; size?: "lg" | "sm" }) {
+/** Circular headshot — real photo when `src` is set, initials fallback otherwise. */
+function Avatar({ name, src, size = "lg" }: { name: string; src?: string; size?: "lg" | "sm" }) {
+  const px = size === "lg" ? 112 : 64;
+  const dim = size === "lg" ? "h-28 w-28" : "h-16 w-16";
+
+  if (src) {
+    return (
+      <Image
+        src={src}
+        alt={`${name} headshot`}
+        width={px}
+        height={px}
+        className={`${dim} shrink-0 rounded-full object-cover`}
+      />
+    );
+  }
+
   return (
     <div
       aria-hidden="true"
-      className={`flex items-center justify-center rounded-full bg-gradient-to-br from-pressed-sage to-eucalyptus font-serif text-frost-white ${
-        size === "lg" ? "h-28 w-28 text-3xl" : "h-16 w-16 text-xl"
+      className={`flex ${dim} shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-pressed-sage to-eucalyptus font-serif text-frost-white ${
+        size === "lg" ? "text-3xl" : "text-xl"
       }`}
     >
       {initials(name)}
@@ -48,8 +64,7 @@ export default function TeamPage() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {teamMembers.map((member) => (
             <Card key={member.name} padding="lg" className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:gap-6 sm:text-left">
-              {/* TODO: Replace with real headshot */}
-              <Avatar name={member.name} />
+              <Avatar name={member.name} src={member.image} />
               <div className="mt-5 sm:mt-0">
                 <h2 className="font-serif text-2xl text-charcoal">{member.name}</h2>
                 <p className="mt-0.5 text-sm font-medium uppercase tracking-eyebrow text-eucalyptus">

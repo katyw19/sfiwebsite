@@ -128,25 +128,28 @@ export const teamMembers: TeamMember[] = [
     name: "Katy Wan",
     title: "President & Founder",
     bio: "Katy founded SFI after learning the true cost of the clothes she loved. She discovered that the fashion industry is responsible for 10% of annual global carbon emissions and that many garments take hundreds of years to decompose. She started SFI to help build a more thoughtful relationship with what we wear. Outside of SFI, she enjoys digital art, crafting, and writing.",
-    // TODO: Replace with real headshot at /images/team/katy-wan.jpg
+    image: "/images/team/katy-wan.jpg",
   },
   {
     name: "Kavita Sarin",
     title: "Vice President",
     // TODO: Replace with real bio.
     bio: "Bio coming soon. Kavita helps guide SFI's strategy and growth as Vice President.",
+    image: "/images/team/kavita-sarin.jpg",
   },
   {
     name: "Dan Wan",
     title: "Secretary / Legal",
     // TODO: Replace with real bio.
     bio: "Bio coming soon. Dan supports SFI's governance and legal foundation as Secretary.",
+    image: "/images/team/dan-wan.jpg",
   },
   {
     name: "Cassandra McClure",
     title: "Board Advisor",
     // TODO: Replace with real bio.
     bio: "Bio coming soon. Cassandra advises the SFI board on nonprofit strategy and impact.",
+    image: "/images/team/cassandra-mcclure.jpg",
   },
 ];
 
