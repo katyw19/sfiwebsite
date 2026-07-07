@@ -45,10 +45,20 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "modal-in": {
+          "0%": { opacity: "0", transform: "translateY(12px) scale(0.98)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
       },
       animation: {
         "bounce-slow": "bounce-slow 2s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out both",
+        "fade-in": "fade-in 0.2s ease-out both",
+        "modal-in": "modal-in 0.22s ease-out both",
       },
       typography: ({ theme }: { theme: (path: string) => string }) => ({
         sfi: {

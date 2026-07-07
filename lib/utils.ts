@@ -33,6 +33,15 @@ export function readingTime(text: string): string {
   return `${minutes} min read`;
 }
 
+/** Up-to-two-letter initials from a name, e.g. "Katy Wan" → "KW". */
+export function initials(name: string): string {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join("");
+}
+
 /** Truncate to a character budget on a word boundary, appending an ellipsis. */
 export function truncate(text: string, max = 150): string {
   if (text.length <= max) return text;
