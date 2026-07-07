@@ -144,7 +144,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Cassandra McClure",
-    title: "Board Advisor",
+    title: "Strategic Advisor",
     bio: "Founder and Editor-in-Chief of Clean Living Magazine. Brings expertise in sustainability, brand partnerships, media, and community engagement, helping the Initiative expand its reach and inspire more conscious consumer choices through strategic storytelling and collaboration.",
     image: "/images/team/cassandra-mcclure.jpg",
   },
