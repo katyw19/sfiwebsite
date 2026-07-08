@@ -7,7 +7,7 @@ import { Icon } from "@/components/ui/icons";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-warm-linen">
-      <Container className="grid grid-cols-1 items-center gap-10 py-14 md:gap-12 lg:min-h-[86vh] lg:grid-cols-2 lg:gap-16 lg:py-20">
+      <Container className="grid grid-cols-1 items-center gap-10 py-14 md:gap-12 lg:min-h-[86vh] lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10 lg:py-20">
         {/* Photo — left on desktop, below text on mobile */}
         <div className="order-2 lg:order-1">
           <div className="relative mx-auto aspect-[3/2] w-full max-w-lg overflow-hidden rounded-xl border border-nordic-linen shadow-[0_20px_50px_rgba(58,63,59,0.12)] lg:max-w-none">
