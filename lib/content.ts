@@ -199,11 +199,13 @@ export const authors: Record<string, { name: string; role: string; bio: string; 
     name: "Katy Wan",
     role: "President & Founder",
     bio: "Katy founded SFI to help build a more thoughtful relationship with what we wear. Outside of SFI, she enjoys digital art, crafting, and writing.",
+    image: "/images/team/katy-wan.jpg",
   },
   "Kyle Wan": {
     name: "Kyle Wan",
     role: "Contributing Writer",
     bio: "Kyle writes for SFI on fashion policy, industry history, and the systems shaping how we make and discard clothing.",
+    image: "/images/team/kyle-wan.jpg",
   },
   "Katelyn Wan": {
     name: "Katelyn Wan",
