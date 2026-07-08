@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
-import { ThreadLine } from "@/components/ui/ThreadLine";
 import { Section } from "@/components/ui/Section";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Icon } from "@/components/ui/icons";
@@ -43,20 +42,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      {/* Hero image */}
-      {post.image ? (
-        <div className="relative h-[280px] w-full overflow-hidden md:h-[400px]">
-          <Image src={post.image} alt={post.title} fill priority sizes="100vw" className="object-cover" />
-        </div>
-      ) : (
-        <PlaceholderImage
-          seed={post.slug}
-          icon={post.tags.includes("guides") ? "BookOpen" : "Leaf"}
-          className="h-[280px] w-full rounded-none md:h-[400px]"
-          rounded={false}
-        />
-      )}
-
       <Container className="py-12 md:py-16">
         <div className="mx-auto max-w-3xl">
           <Link
@@ -67,9 +52,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             All posts
           </Link>
 
-          <h1 className="mt-6 font-serif text-4xl leading-tight text-charcoal">{post.title}</h1>
+          {/* Title + byline first */}
+          <h1 className="mt-6 font-serif text-4xl leading-tight text-charcoal md:text-[2.75rem]">
+            {post.title}
+          </h1>
 
-          {/* Metadata bar */}
           <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-iron-grey">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span aria-hidden="true">·</span>
@@ -87,10 +74,28 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </div>
           )}
 
-          <ThreadLine className="mt-8 w-16" />
+          {/* Cover image, below the title */}
+          {post.image ? (
+            <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-xl border border-nordic-linen">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                priority
+                sizes="(min-width: 768px) 768px, 100vw"
+                className="object-cover"
+              />
+            </div>
+          ) : (
+            <PlaceholderImage
+              seed={post.slug}
+              icon={post.tags.includes("guides") ? "BookOpen" : "Leaf"}
+              className="mt-8 aspect-[16/9] w-full"
+            />
+          )}
 
           {/* Body */}
-          <div className="prose prose-sfi mt-8 max-w-none">
+          <div className="prose prose-sfi mt-10 max-w-none">
             <MDX source={post.content} />
           </div>
 
