@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
 import { buttonClasses } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/icons";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-warm-linen">
-      <Container className="grid grid-cols-1 items-center gap-10 py-12 md:gap-12 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-8 lg:py-16">
+      <div className="mx-auto grid w-full max-w-[84rem] grid-cols-1 items-center gap-10 px-6 py-12 md:gap-12 md:px-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10 lg:px-10 lg:py-16">
         {/* Photo — left on desktop, below text on mobile */}
         <div className="order-2 lg:order-1">
           <div className="relative mx-auto aspect-[3/2] w-full max-w-lg overflow-hidden rounded-xl border border-nordic-linen shadow-[0_20px_50px_rgba(58,63,59,0.12)] lg:max-w-none">
@@ -16,7 +15,7 @@ export function Hero() {
               alt="A rack of neutral-toned secondhand clothing beside a leafy rubber plant"
               fill
               priority
-              sizes="(min-width: 1024px) 48vw, 100vw"
+              sizes="(min-width: 1024px) 52vw, 100vw"
               className="object-cover"
             />
           </div>
@@ -45,7 +44,7 @@ export function Hero() {
             </Link>
           </div>
         </div>
-      </Container>
+      </div>
 
       {/* Scroll-down indicator (desktop) */}
       <div className="pointer-events-none absolute bottom-6 left-1/2 hidden -translate-x-1/2 lg:block" aria-hidden="true">
