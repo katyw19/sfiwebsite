@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ThreadLine } from "./ThreadLine";
 
-type Padding = "none" | "md" | "lg";
+type Padding = "none" | "sm" | "md" | "lg";
 
 /**
  * Comfortable, even interior spacing built from directional utilities (no
@@ -12,6 +12,9 @@ function paddingClasses(padding: Padding, threadBorder: boolean): string {
   if (padding === "none") return "";
   if (padding === "lg") {
     return cn("py-8 pr-8 sm:py-9 sm:pr-9", threadBorder ? "pl-10 sm:pl-12" : "pl-8 sm:pl-9");
+  }
+  if (padding === "sm") {
+    return cn("py-5 pr-5", threadBorder ? "pl-7 sm:pl-8" : "pl-5");
   }
   return cn("py-7 pr-7", threadBorder ? "pl-9 sm:pl-10" : "pl-7");
 }
