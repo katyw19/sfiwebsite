@@ -7,7 +7,7 @@ import { Icon } from "@/components/ui/icons";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-warm-linen">
-      <Container className="grid grid-cols-1 items-center gap-10 py-14 md:gap-12 lg:min-h-[86vh] lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10 lg:py-20">
+      <Container className="grid grid-cols-1 items-center gap-10 py-12 md:gap-12 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:gap-8 lg:py-16">
         {/* Photo — left on desktop, below text on mobile */}
         <div className="order-2 lg:order-1">
           <div className="relative mx-auto aspect-[3/2] w-full max-w-lg overflow-hidden rounded-xl border border-nordic-linen shadow-[0_20px_50px_rgba(58,63,59,0.12)] lg:max-w-none">
@@ -25,8 +25,9 @@ export function Hero() {
         {/* Text — right on desktop */}
         <div className="order-1 animate-fade-in-up lg:order-2">
           <span className="eyebrow">A Bay Area nonprofit for a more thoughtful wardrobe</span>
-          <h1 className="mt-4 font-serif text-4xl leading-[1.05] text-charcoal sm:text-5xl lg:text-hero">
-            Sustainable Fashion Initiative
+          <h1 className="mt-4 font-serif text-4xl leading-[1.06] text-charcoal sm:text-5xl lg:text-[3.25rem]">
+            Sustainable <br className="hidden lg:block" />
+            Fashion Initiative
           </h1>
           <p className="mt-6 font-serif text-2xl leading-snug text-moss-oak md:text-3xl">
             Making sustainable fashion the first choice, not an alternative.
