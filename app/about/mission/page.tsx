@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 };
 
 const problemStats = [
-  "92 million tons of textile waste is generated globally every year.",
-  "The average American throws away approximately 81 pounds of clothing annually.",
-  "A garbage truck's worth of textiles is landfilled or incinerated every second worldwide.",
-  "An average piece of clothing is worn 7 times before being discarded or forgotten.",
+  { value: "~10%", label: "of global carbon emissions come from the fashion industry" },
+  { value: "2,700 L", label: "of water go into making a single cotton t-shirt" },
+  { value: "85%", label: "of textiles end up in landfills or incinerated each year" },
+  { value: "<1%", label: "of clothing is recycled into new clothing" },
 ];
 
 const barriers = ["More expensive", "Less convenient", "Less fashionable", "Less accessible"];
@@ -81,7 +81,7 @@ export default function MissionPage() {
       <PageHero
         eyebrow="Our Mission"
         title="A future where sustainable fashion is the first choice, not an alternative."
-        intro="SFI is a nonprofit making sustainable fashion accessible, aspirational, and community-driven. Our primary audience is 16–30 year olds — a generation uniquely positioned to shape future fashion trends and consumer behavior."
+        intro="SFI is a nonprofit making sustainable fashion accessible, aspirational, and community-driven — built for a generation uniquely positioned to shape the future of fashion trends and consumer behavior."
       />
 
       {/* The Problem */}
@@ -93,18 +93,22 @@ export default function MissionPage() {
               Today&apos;s fashion system encourages people to buy more, wear less, and discard
               clothing faster than ever before.
             </p>
-            <ul className="mt-6 flex flex-col gap-3">
+            <ul className="mt-6 flex flex-col">
               {problemStats.map((stat) => (
-                <li key={stat} className="flex gap-3 text-iron-grey">
-                  <Icon name="ChevronRight" className="mt-1 h-4 w-4 shrink-0 text-eucalyptus" />
-                  <span>{stat}</span>
+                <li
+                  key={stat.value}
+                  className="flex items-baseline gap-4 border-b border-nordic-linen py-3 first:pt-0 last:border-0 last:pb-0"
+                >
+                  <span className="min-w-[5.5rem] shrink-0 font-serif text-2xl text-moss-oak">
+                    {stat.value}
+                  </span>
+                  <span className="text-sm leading-snug text-iron-grey">{stat.label}</span>
                 </li>
               ))}
             </ul>
             <p className="mt-6 leading-relaxed text-iron-grey">
               With social media trends, fashion culture is built around constant purchasing — and
-              sustainable fashion is often viewed as more expensive, less convenient, less
-              fashionable, and less accessible.
+              sustainability is too often treated as a compromise.
             </p>
             <p className="mt-4 font-medium text-charcoal">
               While awareness of fast fashion has increased, overconsumption remains the norm.
@@ -117,19 +121,24 @@ export default function MissionPage() {
               <h3 className="font-serif text-xl text-charcoal">
                 Sustainable fashion is often seen as…
               </h3>
-              <ul className="mt-5 flex flex-col gap-3">
+              <div className="mt-5 grid grid-cols-2 gap-3">
                 {barriers.map((barrier) => (
-                  <li
+                  <div
                     key={barrier}
-                    className="flex items-center gap-3 border-b border-nordic-linen pb-3 text-iron-grey last:border-0 last:pb-0"
+                    className="flex items-center gap-2.5 rounded-lg bg-frost-white px-3.5 py-3"
                   >
-                    <Icon name="X" className="h-4 w-4 shrink-0 text-ash-wood" />
-                    <span>{barrier}</span>
-                  </li>
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ash-wood/25">
+                      <Icon name="X" className="h-3 w-3 text-ash-wood" />
+                    </span>
+                    <span className="text-sm text-iron-grey line-through decoration-ash-wood/50">
+                      {barrier}
+                    </span>
+                  </div>
                 ))}
-              </ul>
-              <p className="mt-6 text-sm leading-relaxed text-iron-grey">
-                We&apos;re here to change every one of these perceptions.
+              </div>
+              <p className="mt-5 flex items-center gap-2 text-sm font-medium text-moss-oak">
+                <Icon name="Check" className="h-4 w-4 shrink-0 text-eucalyptus" />
+                We&apos;re here to change every one of these.
               </p>
             </Card>
           </div>
