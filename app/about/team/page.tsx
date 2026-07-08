@@ -30,13 +30,13 @@ export default function TeamPage() {
       </Section>
 
       {/* Contributors */}
-      <Section bg="linen">
+      <Section bg="linen" size="compact">
         <SectionHeading
           eyebrow="Contributors"
           title="Program leads & contributors"
           description="Volunteers who help SFI create content and run programs."
         />
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {contributors.map((person) => (
             <div key={person.name} className="flex items-center gap-4 rounded-lg border border-nordic-linen bg-frost-white p-6">
               <Avatar name={person.name} src={person.image} sizePx={64} />
