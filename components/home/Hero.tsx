@@ -6,7 +6,7 @@ import { Icon } from "@/components/ui/icons";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-warm-linen">
-      <div className="mx-auto grid w-full max-w-[84rem] grid-cols-1 items-center gap-10 px-6 py-8 md:gap-12 md:px-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10 lg:px-10 lg:py-12">
+      <div className="mx-auto grid w-full max-w-[84rem] grid-cols-1 items-center gap-10 px-6 pb-16 pt-10 md:gap-12 md:px-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-10 lg:px-10 lg:pb-32 lg:pt-16">
         {/* Photo — left on desktop, below text on mobile */}
         <div className="order-2 lg:order-1">
           <div className="relative mx-auto aspect-[16/10] w-full max-w-lg overflow-hidden rounded-xl border border-nordic-linen shadow-[0_20px_50px_rgba(58,63,59,0.12)] lg:max-w-none">
