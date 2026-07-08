@@ -24,10 +24,26 @@ const problemStats = [
 const barriers = ["More expensive", "Less convenient", "Less fashionable", "Less accessible"];
 
 const vision = [
-  "Sees secondhand fashion as desirable and stylish",
-  "Shares, reuses, and extends the life of clothing",
-  "Understands the environmental impact of purchasing decisions",
-  "Builds community through fashion",
+  {
+    title: "Secondhand is the aspiration",
+    icon: "Sparkles",
+    body: "Pre-loved, vintage, and swapped pieces are seen as stylish and desirable — never a compromise.",
+  },
+  {
+    title: "Clothes get a longer life",
+    icon: "Recycle",
+    body: "Sharing, swapping, and mending keep garments in rotation for years, not a handful of wears.",
+  },
+  {
+    title: "Choices made with awareness",
+    icon: "Leaf",
+    body: "People understand the water, carbon, and labor behind the clothes they buy.",
+  },
+  {
+    title: "Fashion that builds community",
+    icon: "Users",
+    body: "Getting dressed becomes a way to connect and express — not just to consume.",
+  },
 ];
 
 const solutions = [
@@ -146,43 +162,46 @@ export default function MissionPage() {
       </Section>
 
       {/* Our Vision */}
-      <Section bg="linen">
+      <Section bg="linen" size="compact">
         <SectionHeading
           eyebrow="Our Vision"
           title="A community that rethinks what it wears"
-          description="A future where sustainable fashion is the first choice, not an alternative. We envision a community that:"
+          description="We picture a culture where secondhand, shared, and long-lasting clothing is simply the norm."
         />
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
           {vision.map((item) => (
-            <div key={item} className="flex items-center gap-3 rounded-lg bg-frost-white p-6">
-              <Icon name="Sprout" className="h-5 w-5 shrink-0 text-eucalyptus" />
-              <span className="text-charcoal">{item}</span>
+            <div key={item.title} className="rounded-lg bg-frost-white p-5">
+              <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-oat-milk">
+                <Icon name={item.icon} className="h-5 w-5 text-eucalyptus" />
+              </div>
+              <h3 className="font-serif text-lg text-charcoal">{item.title}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-iron-grey">{item.body}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Our Approach — Four Pillars (expanded) */}
-      <Section bg="frost">
+      <Section bg="frost" size="compact">
         <SectionHeading
           eyebrow="Our Approach"
           title="Four pillars"
           description="Everything we do ladders up to these four commitments."
         />
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
           {pillars.map((pillar, i) => (
-            <div key={pillar.title} className="flex gap-5 pl-6">
+            <div key={pillar.title} className="flex gap-4 pl-5">
               <ThreadLine orientation="vertical" className="shrink-0" />
               <div>
-                <div className="mb-3 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-oat-milk">
+                <div className="mb-2 flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-oat-milk">
                     <Icon name={pillar.icon} className="h-5 w-5 text-eucalyptus" />
                   </div>
-                  <h3 className="font-serif text-2xl text-charcoal">
+                  <h3 className="font-serif text-xl text-charcoal">
                     {i + 1}. {pillar.title}
                   </h3>
                 </div>
-                <p className="leading-relaxed text-iron-grey">{pillar.long}</p>
+                <p className="text-sm leading-relaxed text-iron-grey">{pillar.long}</p>
               </div>
             </div>
           ))}
