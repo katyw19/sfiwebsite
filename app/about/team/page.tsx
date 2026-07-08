@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/ui/PageHero";
+import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
@@ -52,19 +53,21 @@ export default function TeamPage() {
       </Section>
 
       {/* CTA */}
-      <Section bg="frost">
-        <Card fill="oat" threadBorder padding="lg" className="flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between">
+      <section className="bg-frost-white py-10 md:py-12">
+        <Container>
+          <Card fill="oat" threadBorder padding="lg" className="flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 className="font-serif text-2xl text-charcoal">Want to join the team?</h2>
             <p className="mt-2 text-iron-grey">
               Volunteer or become a Program Lead at your school.
             </p>
           </div>
-          <Link href="/take-action" className={buttonClasses({ variant: "primary", size: "lg", className: "shrink-0" })}>
-            Take Action
-          </Link>
-        </Card>
-      </Section>
+            <Link href="/take-action" className={buttonClasses({ variant: "primary", size: "lg", className: "shrink-0" })}>
+              Take Action
+            </Link>
+          </Card>
+        </Container>
+      </section>
     </>
   );
 }
