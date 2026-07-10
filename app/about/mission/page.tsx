@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -47,47 +46,30 @@ const vision = [
 ];
 
 const solutions = [
-  "Clothing swaps",
-  "Sustainable fashion pop-ups",
-  "Styling events / thrifted fashion showcases",
-  "Educational content / social media campaigns",
-  "Brand collaborations",
-];
-
-const built = [
   {
-    title: "Clothing swaps across Bay Area schools",
-    body: "Hosted annual clothing swap events for students at Castilleja, The Nueva School, Crystal Springs Uplands School, Proof School, and Woodside Priory.",
+    title: "Clothing swaps",
     icon: "Recycle",
+    body: "Bring what you no longer wear, leave with something new to you — always free.",
   },
   {
-    title: "Educational resources",
-    body: "Created outreach materials, sustainability content, and a blog sharing tips, guides, and industry insights.",
+    title: "Pop-up experiences",
+    icon: "Store",
+    body: "Community swap stands and brand-spotlight collaborations that meet people where they already are.",
+  },
+  {
+    title: "Styling & showcases",
+    icon: "Shirt",
+    body: "Thrifted, borrowed, and upcycled fashion shows that prove secondhand can be stunning.",
+  },
+  {
+    title: "Educational content",
     icon: "BookOpen",
+    body: "Blog guides and social campaigns that make more informed fashion choices easy.",
   },
   {
-    title: "Early partnerships",
-    body: "Partnered with Patagonia for clothing donations and giveaway opportunities.",
-    icon: "Heart",
-  },
-];
-
-const next = [
-  {
-    title: "Sustainable Fashion Showcases",
-    body: "Fashion shows featuring thrifted, borrowed, swapped, and upcycled outfits that demonstrate how sustainability and style can coexist.",
-  },
-  {
-    title: "Pop-up Experiences",
-    body: "Community clothing swap stands and brand spotlight collaborations.",
-  },
-  {
-    title: "Digital Education on Social Media",
-    body: "Content focused on sustainable shopping habits and fashion overconsumption.",
-  },
-  {
-    title: "Strategic Brand Partnerships",
-    body: "Collaborating with brands that align with our mission to promote more sustainable practices.",
+    title: "Brand collaborations",
+    icon: "Sparkles",
+    body: "Partnerships with brands that share our commitment to circular, sustainable fashion.",
   },
 ];
 
@@ -210,77 +192,25 @@ export default function MissionPage() {
 
       {/* Our Solution */}
       <Section bg="linen">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div>
-            <SectionHeading eyebrow="Our Solution" title="Experiences people want" />
-            <p className="mt-6 leading-relaxed text-iron-grey">
-              Rather than telling people what not to buy, we create experiences that make sustainable
-              fashion engaging and rewarding.
-            </p>
-          </div>
-          <div className="flex flex-wrap content-start gap-3 lg:pt-16">
-            {solutions.map((item) => (
-              <span
-                key={item}
-                className="inline-flex items-center gap-2 rounded-full border border-nordic-linen bg-frost-white px-4 py-2 text-sm text-charcoal"
-              >
-                <Icon name="Sparkles" className="h-4 w-4 text-eucalyptus" />
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* What We've Built */}
-      <Section bg="frost">
         <SectionHeading
-          eyebrow="What We've Built"
-          title="Laying the foundation for growth"
-          description="Originally launched through student-led clothing swap efforts, SFI has spent the past several years exploring how sustainable fashion can become more accessible."
+          eyebrow="Our Solution"
+          title="Experiences people actually want"
+          description="Rather than telling people what not to buy, we create experiences that make sustainable fashion engaging and rewarding. Here's what that looks like in practice:"
         />
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {built.map((item) => (
-            <Card key={item.title} threadBorder padding="lg">
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-oat-milk">
-                <Icon name={item.icon} className="h-6 w-6 text-eucalyptus" />
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {solutions.map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col rounded-lg border border-nordic-linen bg-frost-white p-6 transition-shadow hover:shadow-[0_8px_30px_rgba(58,63,59,0.08)]"
+            >
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-oat-milk">
+                <Icon name={item.icon} className="h-5 w-5 text-eucalyptus" />
               </div>
-              <h3 className="mt-5 font-serif text-lg text-charcoal">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-iron-grey">{item.body}</p>
-            </Card>
+              <h3 className="font-serif text-lg text-charcoal">{item.title}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-iron-grey">{item.body}</p>
+            </div>
           ))}
         </div>
-      </Section>
-
-      {/* What's Next */}
-      <Section bg="linen">
-        <SectionHeading eyebrow="What's Next" title="Where we're headed" />
-        <ol className="mt-10 flex flex-col gap-6">
-          {next.map((item, i) => (
-            <li key={item.title} className="flex gap-5">
-              <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-pressed-sage font-serif text-base text-charcoal"
-                aria-hidden="true"
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div className="border-b border-nordic-linen pb-6">
-                <h3 className="font-serif text-xl text-charcoal">{item.title}</h3>
-                <p className="mt-1.5 leading-relaxed text-iron-grey">{item.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-10 text-iron-grey">
-          Want to be part of it?{" "}
-          <Link
-            href="/take-action"
-            className="font-medium text-pine-smoke underline underline-offset-4 hover:text-moss-oak"
-          >
-            Take action with SFI
-          </Link>
-          .
-        </p>
       </Section>
     </>
   );
