@@ -20,6 +20,7 @@ export default function EventsPage() {
         eyebrow="Events"
         title="Come swap, shop, and connect."
         intro="Join us at a clothing swap, pop-up, or showcase. Bring gently-used clothes, leave with something new to you."
+        image="/images/headers/events.jpg"
       />
 
       <Section bg="frost">

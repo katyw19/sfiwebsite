@@ -21,6 +21,7 @@ export default function BlogPage() {
         eyebrow="Blog"
         title="Read, learn, rethink."
         intro="Guides, industry insights, and event recaps — everything we're learning about building a more thoughtful relationship with what we wear."
+        image="/images/headers/blog.jpg"
       />
       <Section bg="frost">
         <BlogList posts={posts} tags={tags} />

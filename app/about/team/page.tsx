@@ -23,6 +23,7 @@ export default function TeamPage() {
         eyebrow="Our Team"
         title="Meet the board."
         intro="SFI is led by a small board committed to reshaping how people think about what they wear. Select any board member to read their bio."
+        image="/images/headers/team.jpg"
       />
 
       <Section bg="frost">

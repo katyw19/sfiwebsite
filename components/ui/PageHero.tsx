@@ -8,18 +8,21 @@ export function PageHero({
   title,
   intro,
   children,
+  image = "/images/page-header.jpg",
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   children?: React.ReactNode;
+  /** Background photo for this page's header (washed out behind the text). */
+  image?: string;
 }) {
   return (
     <section className="relative overflow-hidden border-b border-nordic-linen bg-warm-linen">
       {/* Subtle on-brand background photo, washed out for legibility */}
       <div className="absolute inset-0" aria-hidden="true">
         <Image
-          src="/images/page-header.jpg"
+          src={image}
           alt=""
           fill
           priority

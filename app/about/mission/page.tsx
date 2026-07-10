@@ -80,6 +80,7 @@ export default function MissionPage() {
         eyebrow="Our Mission"
         title="A future where sustainable fashion is the first choice, not an alternative."
         intro="SFI is a nonprofit making sustainable fashion accessible, aspirational, and community-driven — built for a generation uniquely positioned to shape the future of fashion trends and consumer behavior."
+        image="/images/headers/mission.jpg"
       />
 
       {/* The Problem */}

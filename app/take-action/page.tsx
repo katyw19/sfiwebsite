@@ -66,6 +66,7 @@ export default function TakeActionPage() {
         eyebrow="Take Action"
         title="Join the movement."
         intro="Every action counts. Whether you have five minutes or five hours a week, here's how you can help make sustainable fashion the first choice."
+        image="/images/headers/take-action.jpg"
       >
         <div className="mt-8 flex flex-wrap gap-2">
           {jumpLinks.map((l) => (

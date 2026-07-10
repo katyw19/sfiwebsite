@@ -21,6 +21,7 @@ export default function PartnersPage() {
         eyebrow="Our Partners"
         title="Building the movement, together."
         intro="SFI works with brands and schools that share our commitment to a more sustainable fashion future."
+        image="/images/headers/partners.jpg"
       />
 
       {/* Brand partners */}
