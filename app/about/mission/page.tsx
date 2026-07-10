@@ -3,7 +3,6 @@ import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
 import { ThreadLine } from "@/components/ui/ThreadLine";
 import { Icon } from "@/components/ui/icons";
 import { pillars } from "@/lib/content";
@@ -114,41 +113,35 @@ export default function MissionPage() {
             </p>
           </div>
 
-          {/* Photo + perception barriers callout */}
-          <div className="flex flex-col gap-6">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-nordic-linen">
+          {/* Photo + myths, unified as one figure */}
+          <div className="overflow-hidden rounded-2xl border border-nordic-linen bg-frost-white shadow-[0_10px_40px_rgba(58,63,59,0.06)]">
+            <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/images/mission/problem.jpg"
-                alt="A rack of neutral-toned clothing against a sage-green wall"
+                alt="A densely packed rack of secondhand clothing on wooden hangers"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
                 className="object-cover"
               />
             </div>
-            <Card fill="oat" threadBorder padding="lg">
-              <h3 className="font-serif text-xl text-charcoal">
-                Sustainable fashion is often seen as…
+            <div className="p-6 sm:p-7">
+              <p className="eyebrow text-ash-wood">The perception gap</p>
+              <h3 className="mt-2 font-serif text-lg text-charcoal">
+                Sustainable fashion is still too often seen as…
               </h3>
-              <div className="mt-5 grid grid-cols-2 gap-3">
+              <ul className="mt-4 grid grid-cols-1 gap-x-5 gap-y-2.5 sm:grid-cols-2">
                 {barriers.map((barrier) => (
-                  <div
-                    key={barrier}
-                    className="flex items-center gap-2.5 rounded-lg bg-frost-white px-3.5 py-3"
-                  >
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ash-wood/25">
-                      <Icon name="X" className="h-3 w-3 text-ash-wood" />
-                    </span>
-                    <span className="text-sm text-iron-grey line-through decoration-ash-wood/50">
-                      {barrier}
-                    </span>
-                  </div>
+                  <li key={barrier} className="flex items-center gap-2.5 text-sm text-iron-grey">
+                    <Icon name="X" className="h-3.5 w-3.5 shrink-0 text-ash-wood" />
+                    <span className="line-through decoration-ash-wood/50">{barrier}</span>
+                  </li>
                 ))}
-              </div>
-              <p className="mt-5 flex items-center gap-2 text-sm font-medium text-moss-oak">
+              </ul>
+              <p className="mt-5 flex items-center gap-2 border-t border-nordic-linen pt-4 text-sm font-medium text-moss-oak">
                 <Icon name="Check" className="h-4 w-4 shrink-0 text-eucalyptus" />
                 We&apos;re here to change every one of these.
               </p>
-            </Card>
+            </div>
           </div>
         </div>
       </Section>
@@ -207,40 +200,31 @@ export default function MissionPage() {
           title="Experiences people actually want"
           description="Rather than telling people what not to buy, we create experiences that make sustainable fashion engaging and rewarding. Here's what that looks like in practice:"
         />
-        {/* Examples in action */}
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-nordic-linen">
+        <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.35fr] lg:items-stretch">
+          {/* Feature photo */}
+          <div className="relative min-h-[20rem] w-full overflow-hidden rounded-2xl border border-nordic-linen lg:min-h-0">
             <Image
-              src="/images/mission/swap.jpg"
-              alt="Two people sharing a shirt at a clothing swap"
+              src="/images/mission/solution.jpg"
+              alt="A neatly folded stack of secondhand knit sweaters"
               fill
-              sizes="(min-width: 640px) 45vw, 100vw"
+              sizes="(min-width: 1024px) 38vw, 100vw"
               className="object-cover"
             />
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-nordic-linen">
-            <Image
-              src="/images/mission/styling.jpg"
-              alt="Styling a thrifted outfit in front of a mirror"
-              fill
-              sizes="(min-width: 640px) 45vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
-        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {solutions.map((item) => (
-            <div
-              key={item.title}
-              className="flex flex-col rounded-lg border border-nordic-linen bg-frost-white p-6 transition-shadow hover:shadow-[0_8px_30px_rgba(58,63,59,0.08)]"
-            >
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-oat-milk">
-                <Icon name={item.icon} className="h-5 w-5 text-eucalyptus" />
+          {/* Examples list */}
+          <div className="divide-y divide-nordic-linen rounded-2xl border border-nordic-linen bg-frost-white px-6 sm:px-8">
+            {solutions.map((item) => (
+              <div key={item.title} className="flex items-start gap-4 py-5 first:pt-6 last:pb-6">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-oat-milk">
+                  <Icon name={item.icon} className="h-5 w-5 text-eucalyptus" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-lg text-charcoal">{item.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-iron-grey">{item.body}</p>
+                </div>
               </div>
-              <h3 className="font-serif text-lg text-charcoal">{item.title}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-iron-grey">{item.body}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Section>
     </>
