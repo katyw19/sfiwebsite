@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -113,8 +114,17 @@ export default function MissionPage() {
             </p>
           </div>
 
-          {/* Perception barriers callout */}
-          <div className="lg:pt-16">
+          {/* Photo + perception barriers callout */}
+          <div className="flex flex-col gap-6">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-nordic-linen">
+              <Image
+                src="/images/mission/problem.jpg"
+                alt="A rack of neutral-toned clothing against a sage-green wall"
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover"
+              />
+            </div>
             <Card fill="oat" threadBorder padding="lg">
               <h3 className="font-serif text-xl text-charcoal">
                 Sustainable fashion is often seen as…
@@ -197,7 +207,28 @@ export default function MissionPage() {
           title="Experiences people actually want"
           description="Rather than telling people what not to buy, we create experiences that make sustainable fashion engaging and rewarding. Here's what that looks like in practice:"
         />
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Examples in action */}
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-nordic-linen">
+            <Image
+              src="/images/mission/swap.jpg"
+              alt="Two people sharing a shirt at a clothing swap"
+              fill
+              sizes="(min-width: 640px) 45vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-nordic-linen">
+            <Image
+              src="/images/mission/styling.jpg"
+              alt="Styling a thrifted outfit in front of a mirror"
+              fill
+              sizes="(min-width: 640px) 45vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {solutions.map((item) => (
             <div
               key={item.title}
