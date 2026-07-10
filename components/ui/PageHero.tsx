@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "./Container";
 import { ThreadLine } from "./ThreadLine";
 
@@ -15,7 +16,20 @@ export function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden border-b border-nordic-linen bg-warm-linen">
-      <Container className="py-16 md:py-20">
+      {/* Subtle on-brand background photo, washed out for legibility */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="/images/page-header.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-warm-linen/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-warm-linen via-warm-linen/80 to-warm-linen/20" />
+      </div>
+      <Container className="relative py-16 md:py-20">
         <span className="eyebrow">{eyebrow}</span>
         <div className="mt-4 flex items-stretch gap-4">
           <ThreadLine orientation="vertical" className="shrink-0" />
