@@ -162,8 +162,8 @@ export default function TakeActionPage() {
         <p>Get updates on upcoming events, new blog posts, and ways to get involved.</p>
       </ActionBlock>
 
-      {/* Bottom note */}
-      <section className="bg-warm-linen pb-20">
+      {/* Bottom note — sits flush above the footer (cancels the footer's mt-16) */}
+      <section className="-mb-16 bg-warm-linen pb-12">
         <Container>
           <div className="rounded-lg border border-nordic-linen bg-frost-white p-8 text-center">
             <h2 className="font-serif text-2xl text-charcoal">Have a question or partnership idea?</h2>
