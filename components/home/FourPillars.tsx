@@ -1,6 +1,5 @@
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/ui/icons";
 import { pillars } from "@/lib/content";
 
@@ -12,17 +11,31 @@ export function FourPillars() {
         title="Four pillars for a more thoughtful wardrobe"
         description="Everything we do ladders up to these four commitments."
       />
-      <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
-        {pillars.map((pillar) => (
-          <Card key={pillar.title} fill="oat" threadBorder padding="sm">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-frost-white">
-              <Icon name={pillar.icon} className="h-5 w-5 text-eucalyptus" />
+      <ol className="mt-10 border-t border-pressed-sage/50">
+        {pillars.map((pillar, i) => (
+          <li
+            key={pillar.title}
+            className="group flex flex-col gap-2 border-b border-pressed-sage/50 py-6 md:flex-row md:items-baseline md:gap-10 md:py-7"
+          >
+            {/* Index + title */}
+            <div className="flex items-baseline gap-4 md:w-[19rem] md:shrink-0">
+              <span className="font-serif text-3xl leading-none text-eucalyptus transition-colors group-hover:text-moss-oak md:text-[2.5rem]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-serif text-2xl text-charcoal md:text-[1.75rem]">{pillar.title}</h3>
             </div>
-            <h3 className="mt-3 font-serif text-xl text-charcoal">{pillar.title}</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-iron-grey">{pillar.short}</p>
-          </Card>
+
+            {/* Description */}
+            <p className="flex-1 leading-relaxed text-iron-grey md:text-lg">{pillar.short}</p>
+
+            {/* Quiet icon accent */}
+            <Icon
+              name={pillar.icon}
+              className="hidden h-7 w-7 shrink-0 self-center text-pressed-sage transition-colors group-hover:text-eucalyptus md:block"
+            />
+          </li>
         ))}
-      </div>
+      </ol>
     </Section>
   );
 }
