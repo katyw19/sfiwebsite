@@ -11,27 +11,27 @@ export function FourPillars() {
         title="Four pillars for a more thoughtful wardrobe"
         description="Everything we do ladders up to these four commitments."
       />
-      <ol className="mt-10 border-t border-pressed-sage/50">
+      <ol className="mt-7 border-t border-pressed-sage/50">
         {pillars.map((pillar, i) => (
           <li
             key={pillar.title}
-            className="group flex flex-col gap-2 border-b border-pressed-sage/50 py-6 md:flex-row md:items-baseline md:gap-10 md:py-7"
+            className="group flex flex-col gap-0.5 border-b border-pressed-sage/50 py-3.5 md:flex-row md:items-baseline md:gap-8 md:py-4"
           >
             {/* Index + title */}
-            <div className="flex items-baseline gap-4 md:w-[19rem] md:shrink-0">
-              <span className="font-serif text-3xl leading-none text-eucalyptus transition-colors group-hover:text-moss-oak md:text-[2.5rem]">
+            <div className="flex items-baseline gap-3 md:w-[14rem] md:shrink-0">
+              <span className="font-serif text-lg leading-none text-eucalyptus transition-colors group-hover:text-moss-oak md:text-xl">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-serif text-2xl text-charcoal md:text-[1.75rem]">{pillar.title}</h3>
+              <h3 className="font-serif text-lg text-charcoal">{pillar.title}</h3>
             </div>
 
             {/* Description */}
-            <p className="flex-1 leading-relaxed text-iron-grey md:text-lg">{pillar.short}</p>
+            <p className="flex-1 text-sm leading-relaxed text-iron-grey">{pillar.short}</p>
 
             {/* Quiet icon accent */}
             <Icon
               name={pillar.icon}
-              className="hidden h-7 w-7 shrink-0 self-center text-pressed-sage transition-colors group-hover:text-eucalyptus md:block"
+              className="hidden h-5 w-5 shrink-0 self-center text-pressed-sage transition-colors group-hover:text-eucalyptus md:block"
             />
           </li>
         ))}
